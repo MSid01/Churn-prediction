@@ -4,60 +4,73 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Bank Churn Predictor</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/index.css') }}" />
   </head>
-  <body>
-    <h1>Add customers details</h1>
-    <form action="http://127.0.0.1:5000/" method="post">
-      <label for="geolocation">Geolocation</label>
-      <select name="geolocation">
-        <option value="0">France</option>
-        <option value="1">Spain</option>
-        <option value="2">Germany</option>
-      </select>
 
-      <label for="gender"> gender</label>
-      <select name="gender">
-        <option value="1">Male</option>
-        <option value="0">Female</option>
-      </select>
-      <label for="credit-score">credit-score</label>
-      <input
-        type="number"
-        required
-        minlength="3"
-        maxlength="3"
-        name="credit-score"
-      />
-      <label for="age">Age</label>
-      <input type="number" required minlength="2" name="age" />
-      <label for="tenure">Tenure</label>
-      <input type="number" required minlength="1" name="tenure" />
-      <label for="balance">Balance</label>
-      <input type="number" required minlength="1" name="balance" />
-      <label for="numOfProducts">Number of Products</label>
-      <input type="number" required minlength="1" name="numOfProducts" />
-      <label for="hasCrCard">Has Credit card</label>
-      <select name="hasCrCard">
-        <option value="1">Yes</option>
-        <option value="0">No</option>
-      </select>
-      <label for="isActiveMember">Is active member</label>
-      <select name="isActiveMember">
-        <option value="1">Yes</option>
-        <option value="0">No</option>
-      </select>
-      <label for="estimatedSalary">Estimated Salary</label>
-      <input
-        type="number"
-        required
-        minlength="4"
-        step="any"
-        name="estimatedSalary"
-      />
-      <!-- <button onclick="submit()">Submit</button> -->
-      <input type="submit" value="Submit" />
-    </form>
+  <body>
+    <div class="wrapper">
+      <h1>Add customers details</h1>
+      <form class="inputcontainer" action="http://127.0.0.1:5000/" method="post">
+        <div class="input-container">
+          <div class="selector">
+            <label class="label" for="geolocation">Geolocation</label>
+            <select class="drop-down" name="geolocation">
+              <option value="0">France</option>
+              <option value="1">Spain</option>
+              <option value="2">Germany</option>
+            </select>
+          </div>
+          <div class="selector">
+            <label class="label" for="gender"> gender</label>
+            <select class="drop-down" name="gender">
+              <option value="1">Male</option>
+              <option value="0">Female</option>
+            </select>
+          </div>
+
+          <!-- Avoid Labels -->
+
+          <!-- <label class="label" for="credit-score">credit-score</label> -->
+          <input class="input" placeholder="credit score" type="number" required minlength="3" maxlength="3" name="credit-score" />
+
+          <!-- <label class="label" for="age">Age</label> -->
+          <input class="input" type="number" required placeholder="Age" minlength="2" name="age" />
+
+          <!-- <label class="label" for="tenure">Tenure</label> -->
+          <input class="input" type="number" required placeholder="Tenure" minlength="1" name="tenure" />
+
+          <!-- <label class="label" for="balance">Balance</label> -->
+          <input class="input" type="number" required placeholder="Balance" minlength="1" name="balance" />
+
+          <!-- <label class="label" for="numOfProducts">Number of Products</label> -->
+          <input class="input" type="number" required placeholder="Number of Product" minlength="1" name="numOfProducts" />
+
+          <div class="selector">
+            <label class="label" for="hasCrCard">Has Credit card</label>
+            <select class="drop-down" name="hasCrCard">
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+
+          <div class="selector">
+            <label class="label" for="isActiveMember">Is active member</label>
+            <select class="drop-down" name="isActiveMember">
+              <option value="1">Yes</option>
+              <option value="0">No</option>
+            </select>
+          </div>
+
+          <!-- <label class="label" for="estimatedSalary">Estimated Salary</label> -->
+          <input class="input" type="number" required minlength="4" step="any" placeholder="Estimated Salary" name="estimatedSalary" />
+
+          <!-- <button onclick="submit()">Submit</button> -->
+          <input class="button" type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+
     <script>
       function submit(e) {
         e.preventDefault();

@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap");
+
+.wrapper {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 10vh;
+}
+* {
+  font-family: "Raleway", sans-serif;
+}
+.input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+  height: auto;
+}
+.input {
+  margin: 0.2rem 0;
+  background-color: rgb(226, 226, 226);
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+  border: 2px solid transparent;
+  outline: none;
+  color: rgb(46, 46, 46);
+  height: auto;
+  font-weight: 900;
+  width: 95%;
+  transition: all ease-in-out 400ms;
+}
+.input:hover {
+  border-color: rgb(49, 153, 49);
+}
+.input:active {
+  border-color: rgb(49, 153, 49);
+}
+.label {
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+  border: 2px solid transparent;
+  white-space: nowrap;
+  font-weight: 900;
+  text-transform: uppercase;
+  outline: none;
+  text-align: left;
+  height: 100%;
+  color: rgb(71, 71, 71);
+  transition: all ease-in-out 400ms;
+}
+.label:hover {
+  transform: scale(1.1);
+}
+
+.button {
+  width: auto;
+  background-color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 0.4rem;
+  font-weight: 900;
+  border: 2px solid transparent;
+  color: rgb(49, 153, 49);
+  transition: all ease-in-out 400ms;
+}
+.button:hover {
+  border-color: rgb(49, 153, 49);
+  color: white;
+  background-color: rgb(49, 153, 49);
+}
+.selector {
+  display: flex;
+  width: 100%;
+}
+.drop-down {
+  width: 40%;
+  background-color: rgb(226, 226, 226);
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+  border: 2px solid transparent;
+  outline: none;
+  color: rgb(46, 46, 46);
+  height: auto;
+  font-weight: 900;
+}
